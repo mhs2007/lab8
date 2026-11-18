@@ -1,14 +1,15 @@
-# Accept number of scores
-
 import sys
+
+# Accept number of scores
 n = int(sys.argv[1])
 
 scores = []
 
 # Accept scores
+score = sys.argv[2].split(",")
+
 for i in range(n):
-    score = float(sys.argv[i])
-    scores.append(score)
+    scores.append(float(score[i]))
 
 # Calculate sum
 total = 0
@@ -18,11 +19,6 @@ for score in scores:
 
 # Calculate average
 average = total / n
-
-# Display results
-print("Scores:", scores)
-print("Sum:", total)
-print("Average:", average)
 
 # Find maximum and minimum
 maximum = scores[0]
@@ -36,5 +32,8 @@ for score in scores:
         minimum = score
 
 # Display results
+print("Scores:", scores)
+print("Sum:", total)
+print("Average:", average)
 print("Maximum Score:", maximum)
 print("Minimum Score:", minimum)
