@@ -1,4 +1,6 @@
 # Accept number of scores
+
+import sys
 n = int(sys.argv[1])
 
 scores = []
